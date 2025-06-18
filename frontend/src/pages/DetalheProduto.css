@@ -1,0 +1,106 @@
+.prod-detail-bg {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #e5f9e7 0%, #d0f3f7 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prod-detail-card {
+  background: #fff;
+  border-radius: 23px;
+  box-shadow: 0 6px 30px rgba(60,200,130,0.10);
+  max-width: 540px;
+  width: 94vw;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  padding: 1.6rem 1.1rem 1.7rem 1.2rem;
+  margin-top: 2.5rem;
+  gap: 2.2rem;
+}
+
+.prod-detail-imgarea {
+  min-width: 120px;
+  min-height: 120px;
+  background: #eaf9f3;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prod-detail-imgarea img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.prod-detail-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.prod-detail-info h2 {
+  color: #295241;
+  font-size: 1.53rem;
+  font-weight: 800;
+  margin-bottom: .5rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.prod-detail-fornecedor {
+  color: #39a0a8;
+  font-size: 1rem;
+  margin-bottom: .7rem;
+  font-weight: 600;
+}
+
+.prod-detail-descricao {
+  color: #555;
+  font-size: 1.08rem;
+  margin-bottom: 1.15rem;
+  min-height: 44px;
+}
+
+.prod-detail-preco {
+  color: #49b661;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1.1rem;
+}
+
+.prod-detail-info button {
+  width: 100%;
+  padding: 0.74rem 1.3rem;
+  background: #49b661;
+  color: #fff;
+  border: none;
+  border-radius: 11px;
+  font-size: 1.08rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(80,200,130,0.09);
+  cursor: pointer;
+  transition: background .18s, transform .11s;
+}
+
+.prod-detail-info button:hover, .prod-detail-info button:focus {
+  background: #37a152;
+  transform: scale(1.04);
+}
+
+@media (max-width: 650px) {
+  .prod-detail-card {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.1rem;
+    padding: 1.2rem .5rem 1.2rem .5rem;
+  }
+  .prod-detail-imgarea {
+    margin-bottom: 1.1rem;
+  }
+}

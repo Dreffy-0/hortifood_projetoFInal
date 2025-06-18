@@ -1,0 +1,113 @@
+.catalogo-container {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #e5f9e7 0%, #d0f3f7 100%);
+  padding: 2.5rem 0 3.5rem 0;
+}
+
+.catalogo-container h1 {
+  text-align: center;
+  color: #49b661;
+  font-size: 2.1rem;
+  font-weight: 800;
+  margin-bottom: 2.7rem;
+  letter-spacing: 1.2px;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.fornecedor-section {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 28px rgba(60,200,130,0.11);
+  margin: 0 auto 2.4rem auto;
+  padding: 2.1rem 2vw 1.3rem 2vw;
+  max-width: 910px;
+}
+
+.fornecedor-section h2 {
+  color: #39a0a8;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1.1rem;
+  margin-left: 0.6rem;
+}
+
+.produtos-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.1rem;
+  justify-content: flex-start;
+}
+
+.produto-card {
+  background: #f9fcfa;
+  border-radius: 15px;
+  box-shadow: 0 2px 14px rgba(90,170,110,0.09);
+  border: 1.3px solid #e2f6ea;
+  width: 185px;
+  min-height: 140px;
+  padding: 1.1rem 0.7rem 1.1rem 0.7rem;
+  margin-bottom: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow .13s, transform .12s, border .18s;
+}
+
+.produto-card:hover {
+  box-shadow: 0 8px 30px rgba(70,160,100,0.16);
+  border: 1.3px solid #49b661;
+  transform: translateY(-2px) scale(1.03);
+}
+
+.imagem-produto {
+  width: 88px;
+  height: 88px;
+  background: #eaf9f3;
+  border-radius: 13px;
+  margin-bottom: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Se quiser colocar imagem, use img 100% */
+}
+
+.produto-card h3 {
+  font-size: 1.13rem;
+  color: #296b48;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+.produto-card button {
+  padding: 0.65rem 1.2rem;
+  background: #49b661;
+  color: #fff;
+  border: none;
+  border-radius: 11px;
+  font-size: 1.03rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(80,200,130,0.09);
+  cursor: pointer;
+  transition: background .18s, transform .11s;
+}
+
+.produto-card button:hover, .produto-card button:focus {
+  background: #37a152;
+  transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+  .fornecedor-section {
+    max-width: 98vw;
+    padding: 1.5rem 1vw 1.3rem 1vw;
+  }
+  .produtos-lista {
+    gap: 1.1rem;
+  }
+  .produto-card { width: 42vw; min-width: 128px; }
+}
+@media (max-width: 600px) {
+  .produto-card { width: 89vw; min-width: 100px; }
+}

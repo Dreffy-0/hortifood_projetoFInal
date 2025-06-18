@@ -1,0 +1,152 @@
+### LOGIN (autenticação)
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "cliente1@email.com",
+  "senha": "123456"
+}
+
+###
+# Após login, copie o access_token retornado e use no Authorization das próximas requisições.
+
+### CRIAR CLIENTE
+POST http://localhost:3000/clientes
+Content-Type: application/json
+
+{
+  "nome": "Cliente Teste",
+  "email": "cliente1@email.com",
+  "cpf": "12345678901",
+  "senha": "123456"
+}
+
+### CRIAR ADMINISTRADOR
+POST http://localhost:3000/clientes
+Content-Type: application/json
+
+{
+  "nome": "Administrador do Sistema",
+  "email": "admin@hortifood.com",
+  "cpf": "11111111111",
+  "senha": "admin123",
+  "tipo": "admin"
+}
+
+### CRIAR ENTREGADOR
+POST http://localhost:3000/clientes
+Content-Type: application/json
+
+{
+  "nome": "Entregador do Hortifood",
+  "email": "entregador@hortifood.com",
+  "cpf": "22222222222",
+  "senha": "entrega123",
+  "tipo": "entregador"
+}
+
+###
+
+### LISTAR CLIENTES (precisa token de admin)
+GET http://localhost:3000/clientes
+Authorization: Bearer {{token}}
+
+###
+
+### CRIAR FORNECEDOR
+POST http://localhost:3000/fornecedores
+Content-Type: application/json
+
+{
+  "nome": "Hortifruti Fresh"
+}
+
+###
+
+### LISTAR FORNECEDORES
+GET http://localhost:3000/fornecedores
+Authorization: Bearer {{token}}
+
+###
+
+### CRIAR PRODUTO
+POST http://localhost:3000/produtos
+Content-Type: application/json
+
+{
+  "nome": "Alface",
+  "categoria": "Verdura",
+  "preco": 5.99,
+  "estoque": 100,
+  "fornecedorId": 1
+}
+
+###
+
+POST http://localhost:3000/produtos
+Content-Type: application/json
+
+{
+  "nome": "Pepino",
+  "categoria": "Verdura",
+  "preco": 5.99,
+  "estoque": 100,
+  "fornecedorId": 1
+}
+
+###
+
+### LISTAR PRODUTOS
+GET http://localhost:3000/produtos
+Authorization: Bearer {{token}}
+
+###
+
+### CRIAR PEDIDO (exemplo com dois produtos)
+POST http://localhost:3000/pedidos
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "clienteId": 1,
+  "produtos": [
+    { "produtoId": 1, "quantidade": 2 },
+    { "produtoId": 2, "quantidade": 1 }
+  ]
+}
+
+###
+
+### LISTAR PEDIDOS DE UM CLIENTE
+GET http://localhost:3000/pedidos/cliente/1
+Authorization: Bearer {{token}}
+
+###
+
+### LISTAR TODOS PEDIDOS (admin)
+GET http://localhost:3000/pedidos
+Authorization: Bearer {{token}}
+
+###
+
+### CRIAR AVALIAÇÃO DE PRODUTO (se existir esse endpoint)
+POST http://localhost:3000/avaliacoes
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "clienteId": 1,
+  "produtoId": 1,
+  "nota": 5,
+  "comentario": "Produto excelente!"
+}
+
+###
+
+### LISTAR AVALIAÇÕES DE UM PRODUTO (opcional)
+GET http://localhost:3000/avaliacoes/id:1
+Authorization: Bearer {{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoiY2xpZW50ZTFAZW1haWwuY29tIiwibm9tZSI6IkNsaWVudGUgVGVzdGUiLCJpYXQiOjE3NTAyODE1MDksImV4cCI6MTc1MDI4NTEwOX0.RwM_AFc-WGiLVVzD_UXfAX7APR4FuiOvKmhbfUGWOcM}}
+
+###
+
+# DICA: substitua {{token}} pelo valor do access_token obtido no login!

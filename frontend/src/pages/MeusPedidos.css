@@ -1,0 +1,35 @@
+.produtos-pedido {
+  margin-top: 1.05rem;
+  margin-bottom: .6rem;
+  padding-left: 0.5rem;
+  list-style: disc inside;
+}
+
+.produtos-pedido li {
+  font-size: 1.02rem;
+  color: #326d5b;
+  margin-bottom: 0.25rem;
+}
+
+.prod-nome {
+  font-weight: 700;
+  color: #39a0a8;
+}
+
+.avaliar-btn {
+  background: #49b661;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.5rem 1.3rem;
+  margin-top: 0.75rem;
+  cursor: pointer;
+  transition: background .18s, transform .11s;
+}
+
+.avaliar-btn:hover, .avaliar-btn:focus {
+  background: #39a0a8;
+  transform: scale(1.03);
+}
