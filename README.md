@@ -14,7 +14,7 @@
 ## ✅ Tecnologias Utilizadas:
 
 - **Backend:** NestJS + TypeORM + SQLite + JWT + Bcrypt
-- **Frontend:** React + TypeScript + Vite + TailwindCSS + Axios + React Router
+- **Frontend:** React + TypeScript + Vite + Axios + React Router
 - **Testes:** Arquivo `requisicoes.http`
 
 ---
@@ -126,3 +126,5 @@ http://localhost:5173
 - Possíveis melhorias: Validação de dados, Upload de imagens, Envio de emails, Paginação, Autorização com JWT em rotas protegidas.
 
 ---
+
+## 🎥 link vídeo de apresentação: https://youtu.be/h9oC9QepG0A
