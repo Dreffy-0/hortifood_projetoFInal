@@ -1,5 +1,5 @@
 
-# 📋 Projeto Hortifood – Backend (NestJS) + Frontend (React + Vite + Tailwind)
+# 📋 Projeto Hortifood – Backend (NestJS) + Frontend (React + Vite)
 
 ## ✅ Integrantes:
 
